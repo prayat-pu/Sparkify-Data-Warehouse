@@ -91,7 +91,3 @@ Data can be fetched from Redshift for analysis using Python. This project includ
 ## Author
 
 - [@prayat](https://www.github.com/prayat-pu)
-
----
-
-This refined README offers a clearer, more professional presentation of your project.

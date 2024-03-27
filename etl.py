@@ -4,12 +4,30 @@ from sql_queries import copy_table_queries, insert_table_queries
 
 
 def load_staging_tables(cur, conn):
+    """
+    run query to load data from staging area into redshift.
+
+    Parameters:
+    cur : cursor for writing query
+    conn : connection of our datbase
+
+    This funciton is not return anything.
+    """
     for query in copy_table_queries:
         cur.execute(query)
         conn.commit()
 
 
 def insert_tables(cur, conn):
+    """
+    run query to insert data into data warehouse in redshift
+
+    Parameters:
+    cur : cursor for writing query
+    conn : connection of our datbase
+
+    This funciton is not return anything.
+    """
     for query in insert_table_queries:
         cur.execute(query)
         conn.commit()
